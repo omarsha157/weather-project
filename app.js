@@ -28,9 +28,11 @@ function getWeather() {
 
 function populateData(data) {
     let htmlData = `
-            <h1>${data.name}</h1>
-            <h3>${data.weather[0].description} ${data.main.temp}&#8451;</h3>
-            <p> pressure is ${data.main.pressure} hPa, humidity of ${data.main.humidity} g/Kg and a wind speed of ${data.wind.speed} kmph</p>
+            <div>
+                <h1>${data.name}</h1>
+                <h3>${data.weather[0].description} ${data.main.temp}&#8451;</h3>
+                <p> pressure is ${data.main.pressure} hPa, humidity of ${data.main.humidity} g/Kg and a wind speed of ${data.wind.speed} kmph</p>
+            </div>
     `;
 
     id_result.innerHTML = htmlData;
